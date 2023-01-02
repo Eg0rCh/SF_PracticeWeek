@@ -21,9 +21,9 @@ public class Parallelogram extends Quadrangle implements Figure {
 
     @Override
     public double getLargeDiagonal() {
-        double d1 = a * Math.sqrt(a * a + b * b - 2 * b * a * Math.cos(Math.toRadians(beta)));
-        double d2 = a * Math.sqrt(a * a + b * b + 2 * b * a * Math.cos(Math.toRadians(alpha)));
-        return Math.max(d1, d2);
+        double d1 = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) + 2 * a * b * Math.cos(Math.toRadians(alpha)));
+        double d2 = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) - 2 * a * b * Math.cos(Math.toRadians(alpha)));
+        return Math.max(d1,d2);
     }
 
     @Override
